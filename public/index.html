@@ -113,13 +113,6 @@
              {
                 data: [],
                 backgroundColor:[
-                    '#ffcd56',
-                    '#ff6384',
-                    '#36a2eb',
-                    '#f66b19',
-                    '#90f542',
-                    '#bc34d1',
-                    '#33cccc'
                 ],
              }
         ],
@@ -141,6 +134,7 @@
                 for(var i = 0; i<res.data.length; i++){
                     dataSource.datasets[0].data[i] = res.data[i].budget;
                     dataSource.labels[i] = res.data[i].title;
+                    dataSource.datasets[0].backgroundColor[i] = res.data[i].color;
                 }
                 createChart();
             });
